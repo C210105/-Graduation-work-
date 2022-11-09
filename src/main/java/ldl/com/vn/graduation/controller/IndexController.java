@@ -3,7 +3,6 @@ package ldl.com.vn.graduation.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.catalina.filters.AddDefaultCharsetFilter;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,8 +10,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import ldl.com.vn.graduation.beans.ClassSchool;
 import ldl.com.vn.graduation.beans.Student;
 import ldl.com.vn.graduation.beans.Teacher;
+import lombok.extern.slf4j.Slf4j;
 
 @Controller
+@Slf4j
 public class IndexController {
     
     @GetMapping("/")
@@ -36,6 +37,7 @@ public class IndexController {
         model.addAttribute("classSchools", classSchools);
         model.addAttribute("students", students);
         
+        log.info("students : {}", students);
         return "toppage/index";
     }
 }
