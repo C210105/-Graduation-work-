@@ -37,7 +37,7 @@ public class IndexController {
         model.addAttribute("classSchools", classSchools);
         model.addAttribute("students", students);
         
-        log.info("students : {}", students);
+        log.debug("students : {}", students);
         return "toppage/index";
     }
 }
