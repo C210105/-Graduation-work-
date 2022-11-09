@@ -90,7 +90,7 @@
                         <div class="card" style="width: 10rem;" th:each="Teacher : ${teachers}">
                             <!-- <img src="/image/photo1.jpg" class="card-img-top" height="50px" alt="..."> -->
                             <div class="card-body">
-                                <h5 class="card-title" th:text="${Teacher.name}"></h5>
+                                <h5 class="card-title" th:text="${Teacher.nameT}"></h5>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item">担当
                                     </li>
@@ -108,8 +108,8 @@
                         <div class="form">
                             <select class="form-select" id="" aria-label="">
                                 <option selected>---選択---</option>
-                                <option th:each="classS : ${ClassSchools}" th:value="${classS.id}"
-                                    th:text="${classS.classId}" value="1"></option>
+                                <option th:each="ClassS : ${classSchools}" th:value="${ClassS.id}"
+                                    th:text="${ClassS.classS}" value="1"></option>
                             </select>
                         </div>
                     </div>
