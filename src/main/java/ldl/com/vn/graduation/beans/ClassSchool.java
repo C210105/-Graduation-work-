@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ClassSchool {
     
-    private String id; //順番
-    private String classS; //クラス名
+    private String idC; //順番
+    private String classN; //クラス名
 }
