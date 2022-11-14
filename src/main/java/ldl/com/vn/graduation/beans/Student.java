@@ -12,10 +12,11 @@ import lombok.NoArgsConstructor;
 public class Student {
     
     private String idS; //学籍番号
-    private String nameS; //名
+    private String nameSE; //名 漢字、英語文字、ひらがな
+    private String nameSK; //名 カタカナ
     private String sexS; //性別
-    private String classS; //クラス名
-    private String phoneS; //携帯番号
+    private String classId; //クラス名
+    private String phoneS; //電話番号
     private ClassSchool classSchoolS;
     private LocalDate insD; //登録日
     private LocalDate updD; //更新日

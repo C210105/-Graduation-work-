@@ -108,8 +108,8 @@
                         <div class="form">
                             <select class="form-select" id="" aria-label="">
                                 <option selected>---選択---</option>
-                                <option th:each="ClassS : ${classSchools}" th:value="${ClassS.id}"
-                                    th:text="${ClassS.classS}" value="1"></option>
+                                <option th:each="ClassS : ${classSchools}" th:value="${ClassS.idC}"
+                                    th:text="${ClassS.classN}" value="1"></option>
                             </select>
                         </div>
                     </div>
@@ -131,20 +131,20 @@
             </div>
             <div>
                 <form action="">
-                    <div class="row row-cols-1 row-cols-md-6 g-4">
+                    <div class="row row-cols-2 row-cols-md-4 g-4">
                         <div class="col" th:each="Student : ${students}">
                             <div class="card border-primary mb-3 text-center" style="max-width: 18rem;">
                                 <div class="card-header" th:text="${Student.idS}"></div>
                                 <div class="card-body text-primary">
-                                    <h5 class="card-title" th:text="${Student.nameS}"></h5>
+                                    <h5 class="card-title" th:text="${Student.nameSE}"></h5>
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item">
-                                            <span>レダ ン ロン</span>
+                                            <span th:text="${Student.nameSK}"></span>
                                             <span></span>
                                             <span th:text="${Student.sexS}"></span>
                                         </li>
                                         <li class="list-group-item">
-                                            <span th:text="${Student.classS}"></span>
+                                            <span th:text="${Student.classId}"></span>
                                             <span></span>
                                             <span>(IT WEB)</span>
                                         </li>

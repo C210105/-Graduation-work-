@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ldl.com.vn.graduation.mappers.StudentMapper">
+  <resultMap id="studentMap" type="ldl.com.vn.graduation.beans.Student" autoMapping="true">
+    <association property="classSchoolS" javaType="ldl.com.vn.graduation.beans.ClassSchool" autoMapping="true">
+    </association>
+  </resultMap>
+  <select id="selectAll" resultMap="studentMap">
+    SELECT
+        student_dl.idS
+        , student_dl.nameSE
+        , student_dl.nameSK
+        , student_dl.sexS
+        , student_dl.classId
+        , student_dl.phoneS
+        , classS_dl.classN 
+    FROM
+        student_dl 
+        LEFT OUTER JOIN classS_dl 
+            ON student_dl.classId = classS_dl.idC 
+    ORDER BY
+        idS
+  </select>
+</mapper>

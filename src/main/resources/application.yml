@@ -1,3 +1,13 @@
+spring:
+  datasource:
+    url: "jdbc:mysql://localhost/graduationdb"
+    username: "nkslong"
+    password: "nkslong"
+  sql:
+    init:
+        mode: always # SQLにデータを書けるようにする。
+        encoding: UTF-8 # 文字フォントを変更する。
+
 logging:
     level:
         root: info
@@ -6,3 +16,7 @@ logging:
     logback:
         rollingpolicy:
             max-file-size: 1MB
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
